@@ -1,1 +1,11 @@
-{}
+{
+    "baseUrl": "",
+    "viewportWidth":  1440,
+    "viewportHeight": 900, 
+    "defaultCommandTimeout": 10000,
+
+    "reporter": "mochawesome",
+    "reporterOptions": {
+        "overwrite": false
+    }
+}
