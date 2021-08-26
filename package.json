@@ -1,17 +1,16 @@
 {
-  "name": "DesafioDuplas",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+      "test:chrome": "cypress run --browser chrome"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {},
+  "cypress-cucumber-preprocessor": {
+      "step_definitions": "cypress/support/steps"
+  },
+  "dependencies": {
+      
+  },
   "devDependencies": {
-    "cypress": "^8.3.0",
-    "cypress-cucumber-preprocessor": "^4.2.0"
+      "cypress": "^8.2.0",
+      "cypress-cucumber-preprocessor": "^4.2.0"
+      
   }
 }
