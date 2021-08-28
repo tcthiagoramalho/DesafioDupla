@@ -1,6 +1,6 @@
 /* global Given, When, Then*/
 
-import acessarSite from "../pageobjets/acessarSite";
+import acessarSite from "../pageobjects/acessarSite";
 import cadastroPage from "../pageobjects/cadastroPage";
 const AcessarSite = new acessarSite
 const Cadastro = new cadastroPage
