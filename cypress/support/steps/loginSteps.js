@@ -1,4 +1,4 @@
-/* global Given, When, Then*/
+/* global Given, And, When, Then*/
 
 import acessarSite from "../pageobjects/acessarSite"
 import loginPage from "../pageobjects/loginPage"
@@ -13,14 +13,14 @@ Given(/^que acesso o site$/, () => {
 
 
 When(/^informo os dados corretos de login$/, () => {
-	
+	login.preencherDadosDeLogin();
 });
 
-And(/^relaizo o sign in $/, () => {
-	
+And(/^relaizo o sign in$/, () => {
+	login.signIn();
 });
 
 
 Then(/^valido que estou logando no site$/, () => {
-	
+	login.ValidaUserLogado();
 });
