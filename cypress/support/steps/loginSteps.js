@@ -22,5 +22,5 @@ And(/^relaizo o sign in$/, () => {
 
 
 Then(/^valido que estou logando no site$/, () => {
-	login.ValidaUserLogado();
+	login.validaUserLogado();
 });

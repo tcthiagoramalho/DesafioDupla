@@ -19,7 +19,7 @@ class loginPage {
         cy.get(Elements.signIn()).click();
     }
 
-    ValidaUserLogado() {
+    validaUserLogado() {
         cy.get(Elements.btnAbriModalLogin()).contains(nameUser)
     }
 
