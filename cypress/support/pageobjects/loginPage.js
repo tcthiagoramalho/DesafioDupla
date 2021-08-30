@@ -7,9 +7,11 @@ const Elements = new loginElements
 class loginPage {
     
     preencherDadosDeLogin() {
+        const nameUser = 'thiagoT'
+
         cy.get(Elements.btnAbriModalLogin()).click();
 
-        cy.get(Elements.username()).type("thiagoT")
+        cy.get(Elements.username()).type(nameUser)
         cy.get(Elements.password()).type("Tc12345")
     }
 
@@ -18,7 +20,7 @@ class loginPage {
     }
 
     ValidaUserLogado() {
-        cy.get(Elements.btnAbriModalLogin()).contains('thiagoT')
+        cy.get(Elements.btnAbriModalLogin()).contains(nameUser)
     }
 
 }
