@@ -3,12 +3,12 @@
 import loginElements from "../elements/loginElements";
 
 const Elements = new loginElements
-
+const nameUser = 'thiagoT'
 class loginPage {
     
+    
     preencherDadosDeLogin() {
-        const nameUser = 'thiagoT'
-
+        //
         cy.get(Elements.btnAbriModalLogin()).click();
 
         cy.get(Elements.username()).type(nameUser)
