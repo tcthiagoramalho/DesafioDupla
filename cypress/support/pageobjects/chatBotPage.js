@@ -3,6 +3,7 @@
 import chatBotElements from "../elements/chatBotElements"
 
 const chatElements = new chatBotElements
+const urlChat = Cypress.config("urlChat")
 
 class chat {
 
@@ -19,7 +20,7 @@ class chat {
         cy.get(chatElements.btnAcessaChat()).click({force: true})
         cy.get('@winOpen').should('be.called')
 
-        cy.visit('https://advantageonlineshopping.com/chat.html')
+        cy.visit(urlChat)
     }
 
     envioDeMensagem() {
