@@ -1,5 +1,6 @@
 {
     "baseUrl": "https://advantageonlineshopping.com/#/",
+    "urlChat": "https://advantageonlineshopping.com/chat.html",
     "viewportWidth":  1440,
     "viewportHeight": 900, 
     "defaultCommandTimeout": 10000,

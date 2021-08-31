@@ -1,11 +1,11 @@
 /// <reference types ="cypress"/>
-const NavegadorUrl = Cypress.config("baseUrl")
+
+const urlSite = Cypress.config("baseUrl")
 
 class site {
     
     AbrirUrl(){
-        cy.visit(NavegadorUrl)
-        cy.wait(3100)
+        cy.visit(urlSite)
     }
 
 }
