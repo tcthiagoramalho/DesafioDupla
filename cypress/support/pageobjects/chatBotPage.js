@@ -13,13 +13,15 @@ class chat {
         cy.get(chatElements.btnChat()).invoke('text').should('to.be.eq', 'CHAT WITH US')
     }
 
-    acessarChat() {
+    validarAberturaDoChat() {
         cy.window().then(win => {
             cy.stub(win, 'open').as('winOpen')
         })
         cy.get(chatElements.btnAcessaChat()).click({force: true})
         cy.get('@winOpen').should('be.called')
+    }
 
+    acessarChat() {
         cy.visit(urlChat)
     }
 
@@ -30,8 +32,8 @@ class chat {
         cy.get(chatElements.btnEnviarMsg()).click()
     }
 
-    respostaPadrao() {
-        cy.get(chatElements.msgTwo()).invoke('text').should('contain', '')
+    validarRespostaBot() {
+        cy.get(chatElements.msgTwo()).invoke('text').should('include', '?')
     }
 
 

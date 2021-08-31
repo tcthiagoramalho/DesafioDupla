@@ -22,6 +22,7 @@ And(/^valido o botão de converse conosco$/, () => {
 
 
 When(/^acesso o chat$/, () => {
+    chat.validarAberturaDoChat();
     chat.acessarChat();
 });
 
@@ -32,7 +33,7 @@ And(/^envio uma mensagem no chat$/, () => {
 
 
 Then(/^valido a mensagem padão de retorno$/, () => {
-	chat.respostaPadrao();
+	chat.validarRespostaBot();
 });
 
 
