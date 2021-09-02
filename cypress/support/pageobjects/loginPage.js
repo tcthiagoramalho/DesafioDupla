@@ -8,7 +8,6 @@ class loginPage {
     
     
     preencherDadosDeLogin() {
-        //
         cy.get(Elements.btnAbriModalLogin()).click();
 
         cy.get(Elements.username()).type(nameUser)
