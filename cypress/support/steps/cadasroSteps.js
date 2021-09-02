@@ -1,21 +1,15 @@
 /* global Given, When, Then*/
 
-import acessarSite from "../pageobjects/acessarSite";
 import cadastroPage from "../pageobjects/cadastroPage";
-const AcessarSite = new acessarSite
+
 const Cadastro = new cadastroPage
 
-Given("que acesso o site do shopping", () => { 
-    AcessarSite.AbrirUrl();
-})
-
-
-And("acesso a tela de cadastro", () => { 
+And(/^acesso a tela de cadastro$/, () => { 
     Cadastro.clicarMenuUsuario(); 
     Cadastro.clicarCreateNewAccount();
 })
 
-When("informo os dados corretos", () => { 
+When(/^informo os dados corretos$/, () => { 
     Cadastro.inserirUserName(); 
     Cadastro.inserirEmail(); 
     Cadastro.inserirPassword();
@@ -30,6 +24,6 @@ When("informo os dados corretos", () => {
     Cadastro.clicarBotãoDeCondição();
 })
 
-Then("valido se o cadastro é realizado com sucesso", () => { 
+Then(/^valido se o cadastro é realizado com sucesso$/, () => { 
     Cadastro.clicarBotãoRegister();
 })
