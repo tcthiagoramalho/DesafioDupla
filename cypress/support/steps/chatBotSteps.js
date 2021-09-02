@@ -1,18 +1,17 @@
 /* global Given, And, When, Then*/
 
 import acessarSite from "../pageobjects/acessarSite"
-import loginPage from "../pageobjects/loginPage";
+import users from "../pageobjects/usersPage"
 import chatBot from "../pageobjects/chatBotPage";
 
 const urlSite = new acessarSite
-const login = new loginPage
 const chat = new chatBot
+const login = new users
 
-Given(/^que estou logado no site$/, () => {
+Given(/^que acesso o site$/, () => {
 	urlSite.AbrirUrl();
 
-    login.preencherDadosDeLogin();
-    login.signIn()
+    login.userthiagoT();
 });
 
 
@@ -32,7 +31,7 @@ And(/^envio uma mensagem no chat$/, () => {
 });
 
 
-Then(/^valido a mensagem padão de retorno$/, () => {
+Then(/^valido a mensagem de resposta do bot$/, () => {
 	chat.validarRespostaBot();
 });
 
