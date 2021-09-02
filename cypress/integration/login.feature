@@ -1,7 +1,11 @@
 Feature: Realizar login no site
 
-Scenario: Realizar login com sucesso
-Given que acesso o site
-When informo os dados corretos de login 
-And relaizo o sign in 
-Then valido que estou logando no site 
+    Scenario: Tentar logar com dados incorretos
+        Given que acesso o site
+        When informo os dados incorretos
+        And clico em sign-in
+        Then valido feedback de dados incorretos
+
+    Scenario: Realizar login com sucesso
+        Given que acesso o site
+        Then realizo o login com usuario e senha corretos

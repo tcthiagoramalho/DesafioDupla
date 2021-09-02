@@ -6,6 +6,8 @@ class loginElements {
     password = () => {return '[a-hint="Password"] > .inputContainer > .ng-pristine'}
 
     signIn = () => {return '#sign_in_btnundefined'}
+
+    msgDadosInvalidos = () => {return '#signInResultMessage'}
 }
 
 export default loginElements
