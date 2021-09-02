@@ -10,8 +10,6 @@ const login = new users
 
 Given(/^que acesso o site$/, () => {
 	urlSite.AbrirUrl();
-
-    login.userthiagoT();
 });
 
 
