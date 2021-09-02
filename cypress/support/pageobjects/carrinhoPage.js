@@ -52,7 +52,6 @@ class carrinhoPage {
     }
 
     removerProdutosCarrinho(){
-        cy.wait(1500)
         cy.screenshot();
         cy.get(Elements.removerPrimeiroProdutoDoCarrinho()).click();
         cy.get(Elements.removerProdutoRestanteDoCarrinho()).click();

@@ -4,14 +4,14 @@ import acessarSite from "../pageobjects/acessarSite"
 import carrinhoPage from "../pageobjects/carrinhoPage"
 import loginPage from "../pageobjects/loginPage"
 
-const AcessarSite = new acessarSite
+const urlSite = new acessarSite
 const login = new loginPage
 const carrinho = new carrinhoPage
 
 
 //CT01
 Given ("que realizo login no site", () => {
-    AcessarSite.AbrirUrl();
+    urlSite.AbrirUrl();
     login.preencherDadosDeLogin();
     login.signIn()
     login.validaUserLogado();
