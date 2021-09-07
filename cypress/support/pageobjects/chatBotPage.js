@@ -10,6 +10,13 @@ class chat {
     validarBtnChat() {
         cy.scrollTo(0, 3000)
 
+        cy.request({
+            method:'GET',
+            url:'https://advantageonlineshopping.com/services.properties'
+        }).then((response) => {
+            expect(response.status).to.equal(200)
+        })
+
         cy.get(chatElements.btnChat()).invoke('text').should('to.be.eq', 'CHAT WITH US')
     }
 

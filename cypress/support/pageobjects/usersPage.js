@@ -14,6 +14,15 @@ class loginDeUsuarios {
         login.signIn()
         login.validaUserLogado(nameUser)
     }
+
+    userTcAlteraSenha() {
+        const nameUser = "TcAlteraSenha"
+        const password = "Tc12345"
+
+        login.preencherDadosDeLogin(nameUser, password)
+        login.signIn()
+        login.validaUserLogado(nameUser)
+    }
 }
 
 export default loginDeUsuarios

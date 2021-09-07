@@ -5,7 +5,6 @@ const Elements = new cadastroElements
 
 class cadastroPage{ 
 clicarMenuUsuario(){ 
-    cy.wait(2000) 
     cy.get(Elements.BtnMenuUsuario()).click(); 
 }
 
