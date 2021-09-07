@@ -17,7 +17,10 @@ When(/^acesso a tela de laptops$/, () => {
 
 Then(/^valido se é possível adicionar um produto no carrinho com as infomações refletindo corretamente$/, () => {
     carrinho.adicionarLaptopHPChromebookEnergyStartNoCarrinho();
-    carrinho.validarInformaçõesDoProdutoHPNoCarrinho();
+    carrinho.acessarCarrinho();
+    carrinho.validarNomeDoProdutoHPNoCarrinho();
+    carrinho.quantidadeProduto1();
+    carrinho.valorProduto1();
     carrinho.removerProdutoLaptopCarrinho();
 })
 
@@ -35,7 +38,13 @@ And(/^adiciono dois produtos diferentes no carrinho$/, () => {
 })
 
 Then(/^valido se as informações refletem corretamente no carrinho$/, () => {
-    carrinho.validarInformaçõesDosProdutosNoCarrinho();
+    carrinho.acessarCarrinho();
+    carrinho.validarInformaçõesDosNomesNoCarrinho();
+    carrinho.quantidadeProduto1();
+    carrinho.valorProduto1();
+    carrinho.quantidadeProduto2();
+    carrinho.valorProduto2();
+    carrinho.validarValorTotalDosProdutos();
     carrinho.removerProdutosCarrinho();
 })
 
@@ -47,11 +56,15 @@ And(/^adiciono um produto no carrinho$/, () =>{
 })
 
 When(/^edito o produto$/, () => {
-    carrinho.validarIformaçõesAntesDeEditar();
+    carrinho.acessarCarrinho();
+    carrinho.validarNomeDoProdutoTabletNoCarrinho();
+    carrinho.quantidadeProduto1();
+    carrinho.valorProduto1();
     carrinho.editarProdutoNoCarrinho();
 })
 
 Then(/^valido se as alterações refletem no carrinho$/, () => {
-    carrinho.validarIformaçõesDepoisDeEditar();
+    carrinho.quantidadeProduto1();
+    carrinho.valorProduto1();
     carrinho.removerProdutoTabletDoCarrinho();
 })

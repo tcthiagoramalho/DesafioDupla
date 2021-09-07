@@ -4,6 +4,12 @@ import carrinhoElements from "../elements/carrinhoElements";
 
 const Elements = new carrinhoElements
 
+let QtdProduto1 = 0;
+let QtdProduto2 = 0;
+let ValorProduto1 = 0;
+let ValorProduto2 = 0;
+let ValorTotalDosProdutos = 0;
+
 class carrinhoPage {
 
     clicarNoProdutoLaptopNaHome(){
@@ -15,11 +21,22 @@ class carrinhoPage {
         cy.get(Elements.addProdutoNoCarrinho()).click();
     }
 
-    validarInformaçõesDoProdutoHPNoCarrinho(){
-        cy.get(Elements.carrinho()).click();
-        cy.get(Elements.hPChromebookEnergyStart()).contains('HP CHROMEBOOK 14 G1(ENERGY STAR)');
-        cy.get(Elements.qtdHPChromebookEnergyStartNoCarrinho()).contains('1');
-        cy.get(Elements.preçoProdutoHPChromebookEnergyStartNoCarrinho()).contains('$299.99')
+    validarNomeDoProdutoHPNoCarrinho(){
+        cy.get(Elements.hPChromebookEnergyStart()).contains('HP CHROMEBOOK 14 G1(ENERGY STAR)');      
+    }
+
+    quantidadeProduto1(){
+        cy.get(Elements.qtdHPChromebookEnergyStartNoCarrinho()).invoke('text').then((QtdProduto1) => {
+            cy.log(QtdProduto1)
+            .should('contain', QtdProduto1)
+        })
+    }
+
+    valorProduto1(){
+        cy.get(Elements.preçoProdutoHPChromebookEnergyStartNoCarrinho()).invoke('text').then((ValorProduto1) => {
+            cy.log(ValorProduto1)
+            .should('contain', ValorProduto1)
+        })
         cy.screenshot();
     }
 
@@ -41,14 +58,36 @@ class carrinhoPage {
         cy.get(Elements.addProdutoNoCarrinho()).click();
     }
 
-    validarInformaçõesDosProdutosNoCarrinho(){
+    acessarCarrinho(){
         cy.get(Elements.carrinho()).click();
+    }
+
+    validarInformaçõesDosNomesNoCarrinho(){
         cy.get(Elements.hPProTablet608G1()).contains('HP PRO TABLET 608 G1');
         cy.get(Elements.hPChromebookEnergyStart()).contains('HP CHROMEBOOK 14 G1(ENERGY STAR)');
-        cy.get(Elements.qtdHPProTablet608G1()).should('contain' , '1');
-        cy.get(Elements.qtdHPChromebookEnergyStartNoCarrinho()).should('contain', '1');
-        cy.get(Elements.preçoProdutoHPProTablet608G1NoCarrinho()).should('contain', '$479.00');
-        cy.get(Elements.preçoProdutoHPChromebookEnergyStartNoCarrinho()).contains('$299.99');
+    }
+
+    quantidadeProduto2(){
+        cy.get(Elements.qtdHPChromebookEnergyStartNoCarrinho()).invoke('text').then((QtdProduto2) => {
+            cy.log(QtdProduto2)
+            .should('contain', QtdProduto2)
+        })
+    }
+
+    valorProduto2(){
+        cy.get(Elements.preçoProdutoHPChromebookEnergyStartNoCarrinho()).invoke('text').then((ValorProduto2) => {
+            cy.log(ValorProduto2)
+            .should('contain', ValorProduto2)
+        })
+    }
+
+    validarValorTotalDosProdutos(){
+        const ValorTotalDosProdutos = ValorProduto1 + ValorProduto2;
+        cy.get(Elements.valorTotalDosProdutosNoCarrinho()).invoke('text').then((ValorTotalDosProdutos) => {
+            cy.log(ValorTotalDosProdutos)
+            .should('contain', ValorTotalDosProdutos)
+        })
+        cy.screenshot();
     }
 
     removerProdutosCarrinho(){
@@ -60,22 +99,14 @@ class carrinhoPage {
 
     //CT03
 
-    validarIformaçõesAntesDeEditar(){
-        cy.get(Elements.carrinho()).click();
+    validarNomeDoProdutoTabletNoCarrinho(){
         cy.get(Elements.hPProTablet608G1()).contains('HP PRO TABLET 608 G1');
-        cy.get(Elements.qtdHPProTablet608G1()).should('contain' , '1');
-        cy.get(Elements.preçoProdutoHPProTablet608G1NoCarrinho()).should('contain', '$479.00');
     }
+
     editarProdutoNoCarrinho(){  
         cy.get(Elements.btnEdit()).click();
         cy.get(Elements.btnAumentarQtdDoProduto()).click();
         cy.get(Elements.addProdutoNoCarrinho()).click();
-    }
-
-    validarIformaçõesDepoisDeEditar(){
-        cy.get(Elements.qtdHPProTablet608G1()).should('contain' , '2');
-        cy.get(Elements.preçoProdutoHPProTablet608G1NoCarrinho()).should('contain', '$958.00');
-        cy.screenshot();
     }
 
     removerProdutoTabletDoCarrinho(){
