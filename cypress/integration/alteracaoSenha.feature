@@ -9,3 +9,4 @@ Feature: fazer alteração da senha do user
     And faco o sign out
     And tento logar com senha antiga
     And faco o login com nova senha
+    And volto massa ao estado original

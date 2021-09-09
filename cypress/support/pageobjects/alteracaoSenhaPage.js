@@ -21,6 +21,12 @@ class alteraSenha {
         await cy.get(elements.confirmeSenha()).type(novaSenha)
     }
 
+    async alterarParaSenhaAntiga() {
+        await cy.get(elements.senhaAtual()).type(novaSenha)
+        await cy.get(elements.novaSenha()).type(senhaAnterior)
+        await cy.get(elements.confirmeSenha()).type(senhaAnterior)
+    }
+
     async salvarAlteracao() {
         cy.scrollTo(0, 3000)
         cy.wait(2000)

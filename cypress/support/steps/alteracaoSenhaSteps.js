@@ -45,3 +45,10 @@ Then(/^salvo e valido que senha foi alterada$/, async () => {
     await senha.salvarAlteracao();
 	await senha.validarQueAlteraçãoFoiSalva();
 });
+
+And(/^volto massa ao estado original$/, async () => {
+	await senha.acessoConfig();
+	await senha.alterarParaSenhaAntiga();
+	await senha.salvarAlteracao();
+	await senha.validarQueAlteraçãoFoiSalva();
+});
