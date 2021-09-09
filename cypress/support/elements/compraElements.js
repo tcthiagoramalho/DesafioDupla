@@ -8,7 +8,7 @@ valorTotalCompra = () => {return '.roboto-bold > .roboto-medium'}
 btnNext = () => {return '#next_btn'}
 safePayUserName = () => {return '[a-hint="SafePay username"] > .inputContainer > .ng-valid'}
 safePayPassword = () => {return '[a-hint="SafePay password"] > .inputContainer'}
-btnPayNow = () => {return '#pay_now_btn_ManualPayment'}
+btnPayNow = () => {return '#pay_now_btn_SAFEPAY'}
 orderPayment = () => {return '.sticky'}
 btnSafePay = () => {return '[data-ng-click="imgRadioButtonClicked(1); checkedRadio = 1"] > input'}
 
@@ -22,7 +22,8 @@ anoValidade = () => {return '[a-hint="YYYY"] > .inputContainer > .ng-pristine'}
 limparNomeNoCartao = () => {return '[a-hint="Cardholder name"] > .inputContainer > .ng-pristine'}
 nomeNoCartao = () => {return '[a-hint="Cardholder name"] > .inputContainer > .ng-valid'}
 btnEdit = () => {return '.edit'}
-salvarDadosDoCartao = () => {return '[ng-show="(imgRadioButton == 2) && (noCards || showMasterCart)"] > .secForm > .option > .ng-pristine'}
+salvarDadosDoSafePay = () => {return '[ng-show="imgRadioButton == 1"] > .secForm > .option > .ng-valid'}
+salvarDadosDoCartao = () => {return '[ng-show="(imgRadioButton == 2) && (noCards || showMasterCart)"] > .secForm > .option > .ng-valid'}
 
 }
 export default compraElements;

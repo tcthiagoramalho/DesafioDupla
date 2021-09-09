@@ -73,14 +73,24 @@ selecionarSafePay(){
     cy.get(Elements.btnSafePay()).click();
 }
 
+checkBoxSalvarDadosSafePay(){
+    cy.get(Elements.salvarDadosDoSafePay()).click()
+}
+
+
 //CT02
 selecionarMasterCredit(){
     cy.get(Elements.btnMasterCredit()).click();
 }
 
-informarDadosDoCartao(){
+editarDadosDoCartão(){
     cy.get(Elements.btnEdit()).click();
+}
+
+checkBoxSalvarDadosCartão(){
     cy.get(Elements.salvarDadosDoCartao()).click();
+}
+informarDadosDoCartao(){
     cy.get(Elements.numeroCartaoCredito()).type("5309 6585 7928 3153");
     cy.get(Elements.cVVnumero()).type("0351");
     cy.get(Elements.mesValidade()).select('02')

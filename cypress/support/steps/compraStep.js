@@ -35,7 +35,10 @@ And(/^adiciono produtos diferentes no carrinho$/, () => {
 
 When(/^informo o SafePay como forma de pagamento$/, () => {	
     compra.selecionarSafePay();
+    compra.checkBoxSalvarDadosSafePay();
     compra.inserirSafePayUserName();
+    compra.inserirSafePayPassword();
+    compra.checkBoxSalvarDadosSafePay();
     compra.clicarBotaoPayNow();   
 });
 
@@ -48,7 +51,10 @@ Then(/^realizo a compra com sucesso$/, () => {
 
 When(/^informo o MasterCredit como forma de pagamento$/, () => {
 	compra.selecionarMasterCredit();
+    compra.editarDadosDoCartão();
+    compra.checkBoxSalvarDadosCartão();
     compra.informarDadosDoCartao();
+    compra.checkBoxSalvarDadosCartão();
     compra.clicarBotaoPayNow();
 });
 
