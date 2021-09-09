@@ -1,10 +1,10 @@
 /// <reference types ="cypress"/>
 
 import alteraSenhaElements from "../elements/alteracaoSenhaElements"
-
+const users = require("../../fixtures/users.json")
 const elements = new alteraSenhaElements
-const novaSenha = "Tc54321"
-const snehaAtual = "Tc12345"
+const novaSenha = users.alteraSenha.novaSenha
+const senhaAnterior = users.alteraSenha.senhaAtual
 
 class alteraSenha {
 
@@ -16,19 +16,19 @@ class alteraSenha {
     }
 
     async alterarSenha() {
-        await cy.get(elements.senhaAtual()).type(snehaAtual)
+        await cy.get(elements.senhaAtual()).type(senhaAnterior)
         await cy.get(elements.novaSenha()).type(novaSenha)
         await cy.get(elements.confirmeSenha()).type(novaSenha)
     }
 
     async salvarAlteracao() {
         cy.scrollTo(0, 3000)
-        cy.wait(3000)
-        await cy.get(elements.btnSalvar()).click({force: true})
+        cy.wait(2000)
+        await cy.get(elements.btnSalvar()).click()
     }
 
     async validarQueAlteraçãoFoiSalva() {
-        await cy.get(elements.myAccount()).invoke('text').should('contain', 'MY ACCOUNT')
+        await cy.get(elements.myAccount()).invoke('text').should('contain', 'Account details')
     }
 }
 

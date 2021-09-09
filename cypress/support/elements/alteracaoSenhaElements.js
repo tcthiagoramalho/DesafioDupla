@@ -9,7 +9,7 @@ class alteraSenhaElements {
     confirmeSenha = () => {return '[a-hint="Confirm New Password"] > .inputContainer > .ng-pristine'}
     btnSalvar = () => {return '#save_btnundefined'}
 
-    myAccount = () => {return '.sticky'}
+    myAccount = () => {return ':nth-child(1) > .blueLink'}
 }
 
 export default alteraSenhaElements
