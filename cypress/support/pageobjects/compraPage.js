@@ -3,6 +3,15 @@
 import compraElements from "../elements/compraElements";
 const Elements = new  compraElements
 
+const pagamentos = require('../../fixtures/pagamentos.json')
+const numerocartao = pagamentos.cartao.numeroCartao
+const cvv = pagamentos.cartao.cVV
+const mes = pagamentos.cartao.mes
+const ano = pagamentos.cartao.ano
+const nome = pagamentos.cartao.nome
+const user = pagamentos.safePay.user
+const password = pagamentos.safePay.password
+
 let valorEnvio = 0;
 let TotalProduto1 = 0;
 let TotalProduto2 = 0;
@@ -39,7 +48,7 @@ valorTotalEnvio(){
 }
 
 valorTotalDaCompra(){
-    const valorTotal = TotalProduto1 + TotalProduto2 + valorEnvio;
+    valorTotal = TotalProduto1 + TotalProduto2 + valorEnvio;
         cy.get(Elements.valorTotalCompra()).invoke('text').then((valorTotal) => {
             cy.log(valorTotal)
             .should('contain', valorTotal)
@@ -52,12 +61,12 @@ clicarBotaoNext(){
 
 inserirSafePayUserName(){
     cy.get(Elements.safePayUserName()).clear()
-    cy.get(Elements.safePayUserName()).type("TesteDupla")
+    cy.get(Elements.safePayUserName()).type(user)
 }
 
 inserirSafePayPassword(){
     cy.get(Elements.safePayPassword()).clear();
-    cy.get(Elements.safePayPassword()).type("Td12345")
+    cy.get(Elements.safePayPassword()).type(password)
 }
 
 clicarBotaoPayNow(){
@@ -91,12 +100,12 @@ checkBoxSalvarDadosCartão(){
     cy.get(Elements.salvarDadosDoCartao()).click();
 }
 informarDadosDoCartao(){
-    cy.get(Elements.numeroCartaoCredito()).type("5309 6585 7928 3153");
-    cy.get(Elements.cVVnumero()).type("0351");
-    cy.get(Elements.mesValidade()).select('02')
-    cy.get(Elements.anoValidade()).select('2022')
+    cy.get(Elements.numeroCartaoCredito()).type(numerocartao);
+    cy.get(Elements.cVVnumero()).type(cvv);
+    cy.get(Elements.mesValidade()).select(mes)
+    cy.get(Elements.anoValidade()).select(ano)
     cy.get(Elements.limparNomeNoCartao()).clear();
-    cy.get(Elements.nomeNoCartao()).type("Teste Laercio")
+    cy.get(Elements.nomeNoCartao()).type(nome)
 }
 
 }

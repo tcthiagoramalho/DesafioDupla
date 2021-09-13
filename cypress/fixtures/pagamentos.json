@@ -1,0 +1,14 @@
+{
+    "cartao":{
+        "numeroCartao": "5309 6585 7928 3153",
+        "cVV": "0351",
+        "mes": "02",
+        "ano": "2022",
+        "nome": "Teste Dupla" 
+    },
+
+    "safePay":{
+        "user": "TesteDupla",
+        "password": "Td12345"
+    }
+}
