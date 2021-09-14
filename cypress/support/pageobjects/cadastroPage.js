@@ -2,6 +2,17 @@
 import cadastroElements from "../elements/cadastroElements";
 const Elements = new cadastroElements
 
+const dadocad = require('../../fixtures/dadosCad.json')
+const email = dadocad.account.email
+const senha = dadocad.account.senha
+const firsName = dadocad.personal.firsName
+const lastName = dadocad.personal.lastName
+const phone = dadocad.personal.phone
+const country = dadocad.address.country
+const city = dadocad.address.city
+const address = dadocad.address.address
+const region = dadocad.address.region
+const cep = dadocad.address.cep
 
 class cadastroPage{ 
 clicarMenuUsuario(){ 
@@ -17,43 +28,43 @@ clicarCreateNewAccount(){
 }
 
 inserirEmail(){ 
-    cy.get(Elements.CadastroEmail()).type("testedupla@teste.com") 
+    cy.get(Elements.CadastroEmail()).type(email) 
 }
 
 inserirPassword(){
-    cy.get(Elements.Password()).type("Dl123456") 
-    cy.get(Elements.ConfirmPassword()).type("Dl123456") 
+    cy.get(Elements.Password()).type(senha) 
+    cy.get(Elements.ConfirmPassword()).type(senha) 
 }
 
 inserirFirstName(){
-    cy.get(Elements.FirstName()).type("Teste")
+    cy.get(Elements.FirstName()).type(firsName)
  }
 
 inserirLastName(){ 
-    cy.get(Elements.LastName()).type("Dupla")
+    cy.get(Elements.LastName()).type(lastName)
  }
 inserirPhone(){
-    cy.get(Elements.Phone()).type("1111111111")
+    cy.get(Elements.Phone()).type(phone)
  }
 
 selecionarCountry(){
-    cy.get(Elements.Country()).select("Brazil")
+    cy.get(Elements.Country()).select(country)
  }
 
 inserirCity(){
-    cy.get(Elements.City()).type("São Paulo")
+    cy.get(Elements.City()).type(city)
  }
 
 inserirAddress(){
-    cy.get(Elements.Address()).type("Rua do teste 500")
+    cy.get(Elements.Address()).type(address)
  }
 
 inserirState(){
-    cy.get(Elements.State()).type("São Paulo")
+    cy.get(Elements.State()).type(region)
  }
 
 inserirPostalCode(){
-    cy.get(Elements.PostalCode()).type("086940SP")
+    cy.get(Elements.PostalCode()).type(cep)
  }
 
 clicarBotãoDeCondição(){
