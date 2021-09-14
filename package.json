@@ -1,6 +1,7 @@
 {
     "scripts": {
-        "test:chrome": "cypress run --browser chrome"
+        "test:chrome": "cypress run --browser chrome",
+        "test:firefox": "cypress run --browser firefox"
     },
     "cypress-cucumber-preprocessor": {
         "step_definitions": "cypress/support/steps"
@@ -10,5 +11,8 @@
         "cypress-cucumber-preprocessor": "^4.2.0",
         "cypress-xpath": "^1.6.2",
         "mochawesome": "^6.2.2"
+    },
+    "dependencies": {
+        "mochawesome-report-generator": "^5.2.0"
     }
 }
