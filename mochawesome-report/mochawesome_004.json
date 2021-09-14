@@ -1,0 +1,121 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-09-14T16:30:40.983Z",
+    "end": "2021-09-14T16:31:23.658Z",
+    "duration": 42675,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "19b60ae7-3584-4eed-8129-42ef9a1a46fe",
+      "title": "",
+      "fullFile": "cypress/integration/compra.feature",
+      "file": "cypress/integration/compra.feature",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ada4422d-b327-4f8b-a184-eefbd2b18b1a",
+          "title": "Realizar compra no site",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Realizar compra no site com SafePay",
+              "fullTitle": "Realizar compra no site Realizar compra no site com SafePay",
+              "timedOut": null,
+              "duration": 20981,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "22644d16-c787-4c91-bc5f-d9b713688b06",
+              "parentUUID": "ada4422d-b327-4f8b-a184-eefbd2b18b1a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Realizar compra no site com MasterCredit",
+              "fullTitle": "Realizar compra no site Realizar compra no site com MasterCredit",
+              "timedOut": null,
+              "duration": 21379,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "21d86e43-77c4-4bcc-bd70-bfc694dfe40f",
+              "parentUUID": "ada4422d-b327-4f8b-a184-eefbd2b18b1a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "22644d16-c787-4c91-bc5f-d9b713688b06",
+            "21d86e43-77c4-4bcc-bd70-bfc694dfe40f"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 42360,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false
+      },
+      "version": "5.2.0"
+    }
+  }
+}

@@ -1,0 +1,140 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-09-14T16:29:11.666Z",
+    "end": "2021-09-14T16:30:02.347Z",
+    "duration": 50681,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d8d4e0f1-329d-48d1-b7bc-ded8f2099cfa",
+      "title": "",
+      "fullFile": "cypress/integration/carrinho.feature",
+      "file": "cypress/integration/carrinho.feature",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "7e81d21b-019a-478e-8974-16e0700f37ef",
+          "title": "Adicionar produtos no Carrinho",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Adicionar um produto ao carrinho",
+              "fullTitle": "Adicionar produtos no Carrinho Adicionar um produto ao carrinho",
+              "timedOut": null,
+              "duration": 16829,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "80e82295-01c2-44d5-9101-015cae09fa2c",
+              "parentUUID": "7e81d21b-019a-478e-8974-16e0700f37ef",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Adicionar mais de um produto no carrinho",
+              "fullTitle": "Adicionar produtos no Carrinho Adicionar mais de um produto no carrinho",
+              "timedOut": null,
+              "duration": 20016,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "78b8f183-aaa0-4865-99f1-dce3a7133cee",
+              "parentUUID": "7e81d21b-019a-478e-8974-16e0700f37ef",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Editar Produto no carrinho e aumentar a quantidade do produto",
+              "fullTitle": "Adicionar produtos no Carrinho Editar Produto no carrinho e aumentar a quantidade do produto",
+              "timedOut": null,
+              "duration": 13661,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "3f3d0e08-aa95-492d-bf5a-38801492ec2e",
+              "parentUUID": "7e81d21b-019a-478e-8974-16e0700f37ef",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "80e82295-01c2-44d5-9101-015cae09fa2c",
+            "78b8f183-aaa0-4865-99f1-dce3a7133cee",
+            "3f3d0e08-aa95-492d-bf5a-38801492ec2e"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 50506,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false
+      },
+      "version": "5.2.0"
+    }
+  }
+}
