@@ -1,8 +1,13 @@
 /// <reference types ="cypress"/>
+
 import cadastroElements from "../elements/cadastroElements";
+import loginPage from "./loginPage";
+
 const Elements = new cadastroElements
+const login = new loginPage
 
 const dadocad = require('../../fixtures/dadosCad.json')
+const userName = dadocad.account.userName
 const email = dadocad.account.email
 const senha = dadocad.account.senha
 const firsName = dadocad.personal.firsName
@@ -15,65 +20,70 @@ const region = dadocad.address.region
 const cep = dadocad.address.cep
 
 class cadastroPage{ 
-clicarMenuUsuario(){ 
-    cy.get(Elements.BtnMenuUsuario()).click(); 
-}
 
-clicarCreateNewAccount(){
-    cy.get(Elements.CreateNewAccount()).click(); 
-}
+    clicarMenuUsuario() { 
+        cy.get(Elements.BtnMenuUsuario()).click(); 
+    }
 
- inserirUserName(){ 
-    cy.get(Elements.UserName()).type("testedupla") 
-}
+    clicarCreateNewAccount() {
+        cy.get(Elements.CreateNewAccount()).click(); 
+    }
 
-inserirEmail(){ 
-    cy.get(Elements.CadastroEmail()).type(email) 
-}
+    inserirUserName() { 
+        cy.get(Elements.UserName()).type(userName) 
+    }
 
-inserirPassword(){
-    cy.get(Elements.Password()).type(senha) 
-    cy.get(Elements.ConfirmPassword()).type(senha) 
-}
+    inserirEmail() { 
+        cy.get(Elements.CadastroEmail()).type(email) 
+    }
 
-inserirFirstName(){
-    cy.get(Elements.FirstName()).type(firsName)
- }
+    inserirPassword() {
+        cy.get(Elements.Password()).type(senha) 
+        cy.get(Elements.ConfirmPassword()).type(senha) 
+    }
 
-inserirLastName(){ 
-    cy.get(Elements.LastName()).type(lastName)
- }
-inserirPhone(){
-    cy.get(Elements.Phone()).type(phone)
- }
+    inserirFirstName() {
+        cy.get(Elements.FirstName()).type(firsName)
+    }
 
-selecionarCountry(){
-    cy.get(Elements.Country()).select(country)
- }
+    inserirLastName() { 
+        cy.get(Elements.LastName()).type(lastName)
+    }
+    inserirPhone() {
+        cy.get(Elements.Phone()).type(phone)
+    }
 
-inserirCity(){
-    cy.get(Elements.City()).type(city)
- }
+    selecionarCountry() {
+        cy.get(Elements.Country()).select(country)
+    }
 
-inserirAddress(){
-    cy.get(Elements.Address()).type(address)
- }
+    inserirCity() {
+        cy.get(Elements.City()).type(city)
+    }
 
-inserirState(){
-    cy.get(Elements.State()).type(region)
- }
+    inserirAddress() {
+        cy.get(Elements.Address()).type(address)
+    }
 
-inserirPostalCode(){
-    cy.get(Elements.PostalCode()).type(cep)
- }
+    inserirState() {
+        cy.get(Elements.State()).type(region)
+    }
 
-clicarBotãoDeCondição(){
-    cy.get(Elements.BtnAcceptCondition()).click();
- }
+    inserirPostalCode() {
+        cy.get(Elements.PostalCode()).type(cep)
+    }
 
-clicarBotãoRegister(){ cy.get(Elements.BtnRegister()).click(); 
+    clicarBotãoDeCondição() {
+        cy.get(Elements.BtnAcceptCondition()).click();
+    }
 
-}
+    clicarBotãoRegister() { 
+        cy.get(Elements.BtnRegister()).click(); 
+    }
+
+    validarUser() {
+        login.validaUserLogado(userName);
+    }
 }
 
 
