@@ -22,8 +22,9 @@ When(/^informo os dados corretos$/, () => {
     Cadastro.inserirState();
     Cadastro.inserirPostalCode(); 
     Cadastro.clicarBotãoDeCondição();
+    Cadastro.clicarBotãoRegister();
 })
 
 Then(/^valido se o cadastro é realizado com sucesso$/, () => { 
-    Cadastro.clicarBotãoRegister();
+    Cadastro.validarUser();
 })
