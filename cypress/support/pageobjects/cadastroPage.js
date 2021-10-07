@@ -19,6 +19,8 @@ const address = dadocad.address.address
 const region = dadocad.address.region
 const cep = dadocad.address.cep
 
+let nome="";
+
 class cadastroPage{ 
 
     clicarMenuUsuario() { 
@@ -30,7 +32,14 @@ class cadastroPage{
     }
 
     inserirUserName() { 
-        cy.get(Elements.UserName()).type(userName) 
+
+        let quantidadeDeSilabas = getRandomIntInclusive(2,3);
+
+        cy.get(Elements.UserName()).then(() => {
+            for (contadorSilaba=1;contadorSilaba<=quantidadeDeSilabas;contadorSilaba++){
+                nome=nome +  getConsoanteAleatoria() + getVogalAleatoria() ;
+            }
+        }).type(nome) 
     }
 
     inserirEmail() { 

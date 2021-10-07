@@ -3,3 +3,4 @@ exemplos/*
 screenshots
 videos
 mochawesome-report
+cypress/plugins/*
