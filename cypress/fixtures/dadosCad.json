@@ -1,0 +1,21 @@
+{
+    "account": {
+        "userName": "valida",
+        "email": "testedupla@teste.com",
+        "senha": "Tc12345"
+    },
+
+    "personal": {
+        "firsName": "Teste",
+        "lastName": "Dupla",
+        "phone": "1111111111"
+    },
+
+    "address": {
+        "country": "Brazil",
+        "city": "São Paulo",
+        "address": "Rua do teste 500",
+        "region": "São Paulo",
+        "cep": "086940SP"
+    }
+}
